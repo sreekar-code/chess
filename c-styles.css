@@ -71,6 +71,10 @@ h1::before, h1::after {
     transform-origin: bottom left;
 }
 
+.intro-break {
+    display: block;
+}
+
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -139,6 +143,10 @@ img {
         margin: 0 auto 30px;
         padding: 0 15px;
         max-width: 100%;
+    }
+
+    .intro-break {
+        display: inline;
     }
 
     .chess-link {
