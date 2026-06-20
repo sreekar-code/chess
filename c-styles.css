@@ -79,8 +79,8 @@ h1::before, h1::after {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    width: 95%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 900px;
     margin: 0 auto 30px;
 }
 
