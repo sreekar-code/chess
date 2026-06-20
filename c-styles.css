@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f0f0f0;
-    background-image: 
+    background-image:
         linear-gradient(45deg, #e6e6e6 25%, transparent 25%),
         linear-gradient(-45deg, #e6e6e6 25%, transparent 25%),
         linear-gradient(45deg, transparent 75%, #e6e6e6 75%),
@@ -31,7 +31,6 @@ h1::before, h1::after {
     content: "♔";
     color: #8b6b4a;
 }
-
 
 .intro {
     text-align: center;
@@ -72,8 +71,6 @@ h1::before, h1::after {
     transform-origin: bottom left;
 }
 
-
-/* Container for pairs of galleries */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -89,24 +86,12 @@ h1::before, h1::after {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.gallery::before, .gallery::after {
-    content: "♟";
-    position: absolute;
-    font-size: 24px;
-    color: #8b6b4a;
-    opacity: 0.3;
-}
-
-.gallery::before {
-    top: 10px;
-    left: 10px;
-}
-
-.gallery::after {
-    bottom: 10px;
-    right: 10px;
+.gallery:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.13);
 }
 
 .gallery-item {
@@ -120,28 +105,25 @@ img {
     aspect-ratio: 1;
     border: 4px solid #8b6b4a;
     border-radius: 8px;
-    transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-
 .description {
-    margin-top: 12px;
-    color: #666;
-    font-size: 0.95em;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #e8e0d8;
+    color: #555;
+    font-size: 1em;
     line-height: 1.4;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 500px) {
     body {
         padding: 10px;
     }
-    
+
     .gallery-container {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -149,7 +131,7 @@ img:hover {
     }
 
     .gallery {
-        padding: 35px;
+        padding: 20px;
     }
 
     .intro {
@@ -159,20 +141,22 @@ img:hover {
         padding: 0 15px;
         max-width: 100%;
     }
-.chess-link {
+
+    .chess-link {
         padding: 2px 0;
     }
 
-    /* Remove hover effects on mobile since they don't make sense */
     .chess-link:hover::after {
         transform: scaleX(1);
     }
 
-    /* Always show underline on mobile for better visibility */
     .chess-link::after {
         transform: scaleX(1);
         height: 1px;
         opacity: 0.7;
     }
-    
+
+    .description {
+        font-size: 1.05em;
+    }
 }
