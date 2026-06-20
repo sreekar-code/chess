@@ -31,7 +31,7 @@ Sreekar shares screenshots from the Chess.com Android app via chat. Steps:
      cropped.save("c-images/imgN.jpeg", "JPEG", quality=92)
      ```
    - **Do not add padding** — any extra pixels at the top pull in the dark app background and show as a black line
-3. **Name** sequentially: next after the highest existing `imgN.jpeg` in `c-images/`
+3. **Name** using the caption slug: lowercase, hyphens, no special chars (e.g. `queen-hunts-king-to-f5.jpeg`)
 4. **Caption** based on what's visible on the board — describe the key piece and finish move (e.g. "Queen Hunts the King to f5", "Knight Strikes on f3")
 5. **Add to HTML** — append a new `.gallery` div inside the single `.gallery-container` in `index.html`:
    ```html
