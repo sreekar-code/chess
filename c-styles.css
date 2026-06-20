@@ -100,7 +100,6 @@ h1::before, h1::after {
 
 img {
     width: 100%;
-    max-width: 300px;
     height: auto;
     aspect-ratio: 1;
     border: 4px solid #8b6b4a;
